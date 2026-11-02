@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #ffffff;
+  --color-plaster: #edeeed;
+  --color-ink: #141414;
+  --color-muted: #545a5c;
+  --color-line: #d5d8d8;
+  /* Červená z kruhu v logu je na text moc světlá, na text a tlačítka se bere tmavší */
+  --color-logo-red: #e84244;
+  --color-red: #c2272d;
+  --color-red-dark: #9f1e23;
+  --color-pipe-blue: #2350a8;
+
+  --font-display: var(--font-mona), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-onest), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-pipe-blue);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-stretch: 112%;
+}
+
+/*
+  Rozvod: dvě souběžné trubky, červená a modrá, které na konci zahnou dolů,
+  stejně jako jeho rozvody pod stropem na fotkách.
+*/
+.rozvod {
+  position: relative;
+  height: var(--spad, 3.5rem);
+}
+.rozvod::before,
+.rozvod::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-color: var(--color-logo-red);
+  border-width: 5px 5px 0 0;
+  border-top-right-radius: 22px;
+}
+.rozvod::before {
+  top: 0;
+  right: 0;
+}
+.rozvod::after {
+  top: 12px;
+  right: 12px;
+  border-color: var(--color-pipe-blue);
+  border-top-right-radius: 10px;
+}

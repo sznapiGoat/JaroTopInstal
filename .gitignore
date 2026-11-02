@@ -1,0 +1,10 @@
+node_modules
+.next
+next-env.d.ts
+.vercel
+.env*
+
+# interní podklady, nepatří do repa
+BRIEF.md
+foto-fb/
+sheet*.jpg
