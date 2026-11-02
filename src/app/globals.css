@@ -66,3 +66,67 @@ body {
   border-color: var(--color-pipe-blue);
   border-top-right-radius: 10px;
 }
+
+/* Hero: fotka se během zobrazení pomalu přiblíží a posune, sudé a liché opačně. */
+.kenburns-a {
+  animation: kenburns-a 9s linear forwards;
+}
+.kenburns-b {
+  animation: kenburns-b 9s linear forwards;
+}
+.anim-paused {
+  animation-play-state: paused;
+}
+@keyframes kenburns-a {
+  from {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(-1.5%, -1%, 0);
+  }
+}
+@keyframes kenburns-b {
+  from {
+    transform: scale(1.14) translate3d(1.5%, 1%, 0);
+  }
+  to {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+}
+
+/* Proužek u přepínače fotek, naplní se za dobu zobrazení jedné fotky */
+.hero-progress {
+  width: 100%;
+  transform-origin: left;
+  animation: hero-progress linear forwards;
+}
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Fotka v hlavičce podstránky: jednou se pomalu přiblíží a zůstane stát */
+@media (prefers-reduced-motion: no-preference) {
+  .photo-drift {
+    animation: photo-drift 18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}
+@keyframes photo-drift {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

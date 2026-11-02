@@ -64,10 +64,11 @@ export default function TopenarPlzen() {
             stropem nebo v podlaze.
           </p>
         }
-        foto={fotky.radiatorNapojeni}
+        foto={fotky.podlahovkaDum}
+        focus="50% 75%"
       />
 
-      <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8 md:pb-24">
+      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
         <h2 className="mb-8 font-display text-3xl font-bold sm:text-4xl">Co dělám</h2>
         <TabulkaSluzeb radky={sluzby} />
       </section>
@@ -100,10 +101,10 @@ export default function TopenarPlzen() {
                 className="aspect-[4/3] w-full object-cover"
               />
               <Image
-                src={fotky.podlahovkaDum.src}
-                alt={fotky.podlahovkaDum.alt}
-                width={fotky.podlahovkaDum.w}
-                height={fotky.podlahovkaDum.h}
+                src={fotky.podlahovkaObyvak.src}
+                alt={fotky.podlahovkaObyvak.alt}
+                width={fotky.podlahovkaObyvak.w}
+                height={fotky.podlahovkaObyvak.h}
                 sizes="(min-width: 768px) 440px, 50vw"
                 className="aspect-[4/3] w-full object-cover"
               />

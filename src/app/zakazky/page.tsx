@@ -77,10 +77,12 @@ export default function Zakazky() {
       <HlavickaStranky
         drobek={{ href: "/zakazky", label: "Zakázky" }}
         nadpis="Fotky ze zakázek"
+        foto={fotky.rozvodyStenaNaradi}
+        focus="50% 40%"
         perex={
           <p>
             Žádné fotky z fotobanky. Všechno, co tu vidíte, jsou moje zakázky, většinou ve fázi, kdy jsou rozvody ještě
-            vidět. Kliknutím fotku zvětšíte.
+            vidět. Kliknutím se fotka zvětší.
           </p>
         }
       />

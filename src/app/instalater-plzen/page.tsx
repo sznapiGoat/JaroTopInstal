@@ -64,10 +64,11 @@ export default function InstalaterPlzen() {
             rodinných domech, bytech i větších objektech.
           </p>
         }
-        foto={fotky.kanalizaceHlavni}
+        foto={fotky.kanalizaceSouber}
+        focus="40% 60%"
       />
 
-      <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8 md:pb-24">
+      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
         <h2 className="mb-8 font-display text-3xl font-bold sm:text-4xl">Co dělám</h2>
         <TabulkaSluzeb radky={sluzby} />
       </section>
@@ -88,7 +89,7 @@ export default function InstalaterPlzen() {
                 fotky.kanalizaceOdbocky,
                 fotky.kanalizaceStoupacka,
                 fotky.kanalizaceDetail,
-                fotky.kanalizaceSouber,
+                fotky.rozvodyObjekt,
                 fotky.kanalizaceRoh,
               ]}
             />

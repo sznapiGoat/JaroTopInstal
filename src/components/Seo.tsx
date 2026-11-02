@@ -45,17 +45,17 @@ export function faqSchema(otazky: { q: string; a: string }[]) {
 type Krok = { href: string; label: string };
 
 /** Drobečková navigace i s BreadcrumbList pro vyhledávače. */
-export function Drobecky({ kroky }: { kroky: Krok[] }) {
+export function Drobecky({ kroky, svetle = false }: { kroky: Krok[]; svetle?: boolean }) {
   const vse = [{ href: "/", label: "Úvod" }, ...kroky];
   return (
     <>
-      <nav aria-label="Drobečková navigace" className="text-sm text-muted">
+      <nav aria-label="Drobečková navigace" className={`text-sm ${svetle ? "text-white/70" : "text-muted"}`}>
         <ol className="flex flex-wrap gap-x-2">
           {vse.map((k, i) => (
             <li key={k.href} className="flex gap-x-2">
               {i > 0 && <span aria-hidden>/</span>}
               {i < vse.length - 1 ? (
-                <Link href={k.href} className="underline underline-offset-4 hover:text-red">
+                <Link href={k.href} className={`underline underline-offset-4 ${svetle ? "hover:text-white" : "hover:text-red"}`}>
                   {k.label}
                 </Link>
               ) : (

@@ -1,42 +1,62 @@
 import Image from "next/image";
 import { Drobecky, JsonLd, faqSchema } from "./Seo";
-import type { Foto } from "@/lib/site";
+import { firma, type Foto } from "@/lib/site";
 
 export function HlavickaStranky({
   drobek,
   nadpis,
   perex,
   foto,
+  focus = "50% 50%",
 }: {
   drobek: { href: string; label: string };
   nadpis: string;
   perex: React.ReactNode;
   foto?: Foto;
+  focus?: string;
 }) {
+  if (!foto) {
+    return (
+      <section className="mx-auto max-w-6xl px-5 pt-8 pb-16 sm:px-8 md:pb-20">
+        <Drobecky kroky={[drobek]} />
+        <h1 className="mt-8 font-display text-[2.3rem] leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
+          {nadpis}
+        </h1>
+        <div className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">{perex}</div>
+      </section>
+    );
+  }
   return (
-    <section className="mx-auto max-w-6xl px-5 pt-8 pb-16 sm:px-8 md:pb-20">
-      <Drobecky kroky={[drobek]} />
-      <div className={`mt-8 grid gap-10 ${foto ? "lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-14" : ""}`}>
-        <div className="min-w-0">
+    <section className="relative isolate overflow-hidden bg-ink text-white">
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <Image
+          src={foto.src}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="photo-drift object-cover"
+          style={{ objectPosition: focus, transformOrigin: focus }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/70 to-ink/40 lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/60 lg:to-ink/10" />
+      </div>
+      <div className="mx-auto flex min-h-[min(68svh,620px)] max-w-6xl flex-col px-5 pt-6 pb-14 sm:px-8 md:pb-20">
+        <Drobecky kroky={[drobek]} svetle />
+        <div className="mt-auto max-w-2xl pt-24">
           <h1 className="font-display text-[2.3rem] leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
             {nadpis}
           </h1>
-          <div className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">{perex}</div>
+          <div className="mt-6 text-lg text-white/85 sm:text-xl">{perex}</div>
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a
+              href={firma.telHref}
+              className="hidden rounded-sm bg-red px-6 py-4 font-display text-lg font-bold text-white hover:bg-red-dark lg:inline-block"
+            >
+              Zavolat {firma.tel}
+            </a>
+            <span className="text-sm text-white/65">{foto.popis}</span>
+          </div>
         </div>
-        {foto && (
-          <figure className="min-w-0">
-            <Image
-              src={foto.src}
-              alt={foto.alt}
-              width={foto.w}
-              height={foto.h}
-              priority
-              sizes="(min-width: 1024px) 420px, 100vw"
-              className="aspect-[4/3] w-full object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-muted">{foto.popis}</figcaption>
-          </figure>
-        )}
       </div>
     </section>
   );
