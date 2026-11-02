@@ -26,7 +26,7 @@ export function Header() {
         </a>
       </div>
       <nav aria-label="Hlavní (mobil)" className="border-t border-line lg:hidden">
-        <ul className="mx-auto flex max-w-6xl justify-between gap-4 overflow-x-auto px-5 py-3 font-medium whitespace-nowrap sm:justify-start sm:gap-8 sm:px-8">
+        <ul className="mx-auto flex max-w-6xl justify-between gap-4 overflow-x-auto px-5 py-3 text-[0.9375rem] font-medium whitespace-nowrap sm:justify-start sm:gap-8 sm:px-8">
           {navigace.map((n) => (
             <li key={n.href}>
               <NavLink href={n.href}>{n.label}</NavLink>
@@ -36,11 +36,6 @@ export function Header() {
       </nav>
     </header>
   );
-}
-
-/** Rozvod, který na konci zahne dolů. Šířka a výška se řídí rodičem. */
-export function Rozvod({ className = "", spad = "3.5rem" }: { className?: string; spad?: string }) {
-  return <div aria-hidden className={`rozvod ${className}`} style={{ ["--spad" as string]: spad }} />;
 }
 
 export function KontaktPas({
@@ -107,7 +102,7 @@ export function Footer() {
 export function MobilZavolat() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-paper p-3 lg:hidden">
-      <a href={firma.telHref} className="block rounded-sm bg-red py-3.5 text-center font-display text-lg font-bold text-white">
+      <a href={firma.telHref} className="block bg-red active:translate-y-px py-3.5 text-center font-display text-lg font-bold text-white">
         Zavolat {firma.tel}
       </a>
     </div>

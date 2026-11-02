@@ -73,11 +73,11 @@ export default function TopenarPlzen() {
         <TabulkaSluzeb radky={sluzby} />
       </section>
 
-      <section className="bg-ink text-white">
+      <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-          <div className="grid gap-6 md:grid-cols-[1fr_1.2fr] md:gap-14">
+          <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Podlahové topení</h2>
-            <p className="text-lg text-white/75">
+            <p className="mt-5 text-lg text-muted">
               Smyčky kladené do šneku s pravidelnou roztečí, aby podlaha hřála rovnoměrně od okna po dveře. Na fotkách
               přízemí rodinného domu a malá koupelna.
             </p>
@@ -134,9 +134,9 @@ export default function TopenarPlzen() {
 
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-          <div className="grid gap-6 md:grid-cols-[1fr_1.2fr] md:gap-14">
+          <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Nové radiátory a rozvody</h2>
-            <p className="text-lg text-muted">
+            <p className="mt-5 text-lg text-muted">
               Výměna radiátorů v rodinném domě a v panelovém bytě. Trasy v drážce se po zapravení ztratí, zůstane jen
               radiátor pod oknem.
             </p>

@@ -50,7 +50,7 @@ export function HlavickaStranky({
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href={firma.telHref}
-              className="hidden rounded-sm bg-red px-6 py-4 font-display text-lg font-bold text-white hover:bg-red-dark lg:inline-block"
+              className="hidden bg-red active:translate-y-px px-6 py-4 font-display text-lg font-bold text-white hover:bg-red-dark lg:inline-block"
             >
               Zavolat {firma.tel}
             </a>
@@ -62,14 +62,14 @@ export function HlavickaStranky({
   );
 }
 
-/** Seznam služeb jako tabulka: co a co to obnáší. */
+/** Služby ve dvou sloupcích: co a co to obnáší. */
 export function TabulkaSluzeb({ radky }: { radky: [string, string][] }) {
   return (
-    <dl className="border-t border-ink">
+    <dl className="grid gap-x-14 gap-y-9 border-t border-ink pt-10 md:grid-cols-2">
       {radky.map(([co, popis]) => (
-        <div key={co} className="grid gap-1 border-b border-line py-5 md:grid-cols-[16rem_1fr] md:gap-10">
-          <dt className="font-display text-lg font-bold">{co}</dt>
-          <dd className="text-muted">{popis}</dd>
+        <div key={co} className="max-w-[34rem]">
+          <dt className="font-display text-xl font-bold">{co}</dt>
+          <dd className="mt-2 text-muted">{popis}</dd>
         </div>
       ))}
     </dl>

@@ -9,10 +9,13 @@ export function Galerie({
   fotky,
   sloupce = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
   pomer = "aspect-[4/3]",
+  mozaika = false,
 }: {
   fotky: Foto[];
   sloupce?: string;
   pomer?: string;
+  /** První fotka přes dva sloupce a dva řádky, ať skupina nevypadá jako tabulka. */
+  mozaika?: boolean;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [i, setI] = useState<number | null>(null);
@@ -42,25 +45,31 @@ export function Galerie({
   return (
     <>
       <ul className={`grid gap-x-4 gap-y-6 ${sloupce}`}>
-        {fotky.map((foto, n) => (
-          <li key={foto.src}>
-            <button
-              type="button"
-              onClick={() => otevrit(n)}
-              className="block w-full border-b-[3px] border-transparent text-left hover:border-logo-red"
-            >
-              <Image
-                src={foto.src}
-                alt={foto.alt}
-                width={foto.w}
-                height={foto.h}
-                sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
-                className={`${pomer} w-full object-cover`}
-              />
-              <span className="block py-2 text-sm text-muted">{foto.popis}</span>
-            </button>
-          </li>
-        ))}
+        {fotky.map((foto, n) => {
+          const velka = mozaika && n === 0;
+          // Za velkou fotkou jdou řady po třech; zbydou-li v poslední řadě dvě, poslední se roztáhne.
+          const siroka = mozaika && n === fotky.length - 1 && (fotky.length - 3) % 3 === 2;
+          return (
+            <li key={foto.src} className={velka ? "sm:col-span-2 lg:row-span-2" : siroka ? "lg:col-span-2" : ""}>
+              <button
+                type="button"
+                onClick={() => otevrit(n)}
+                className="flex h-full w-full flex-col border-b-[3px] border-transparent text-left hover:border-logo-red"
+              >
+                <span className={`relative block w-full ${velka ? "aspect-[4/3] lg:aspect-auto lg:flex-1" : siroka ? `${pomer} lg:aspect-[8.1/3]` : pomer}`}>
+                  <Image
+                    src={foto.src}
+                    alt={foto.alt}
+                    fill
+                    sizes={velka ? "(min-width: 1024px) 760px, 100vw" : "(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"}
+                    className="object-cover"
+                  />
+                </span>
+                <span className="block py-2 text-sm text-muted">{foto.popis}</span>
+              </button>
+            </li>
+          );
+        })}
       </ul>
 
       <dialog

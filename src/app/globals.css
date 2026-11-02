@@ -37,36 +37,6 @@ body {
   font-stretch: 112%;
 }
 
-/*
-  Rozvod: dvě souběžné trubky, červená a modrá, které na konci zahnou dolů,
-  stejně jako jeho rozvody pod stropem na fotkách.
-*/
-.rozvod {
-  position: relative;
-  height: var(--spad, 3.5rem);
-}
-.rozvod::before,
-.rozvod::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-style: solid;
-  border-color: var(--color-logo-red);
-  border-width: 5px 5px 0 0;
-  border-top-right-radius: 22px;
-}
-.rozvod::before {
-  top: 0;
-  right: 0;
-}
-.rozvod::after {
-  top: 12px;
-  right: 12px;
-  border-color: var(--color-pipe-blue);
-  border-top-right-radius: 10px;
-}
-
 /* Hero: fotka se během zobrazení pomalu přiblíží a posune, sudé a liché opačně. */
 .kenburns-a {
   animation: kenburns-a 9s linear forwards;

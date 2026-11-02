@@ -49,7 +49,6 @@ const duvody = [
   {
     tvrzeni: "Fotky jen z mých zakázek",
     detail: "Žádná fotobanka. Rozvody, jak vypadají před omítkou.",
-    odkaz: { href: "/zakazky", label: "Prohlédnout zakázky" },
   },
   { tvrzeni: "Přes 15 let v oboru", detail: "Velkou část z toho na stavbách v Německu." },
   {
@@ -80,24 +79,23 @@ export default function Home() {
       <section className="relative isolate flex min-h-[calc(100svh-12.5rem)] flex-col overflow-hidden bg-ink text-white lg:min-h-[min(calc(100svh-4.75rem),860px)]">
         <HeroSlideshow slides={slides} />
         <div className="relative z-[5] mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pt-24 pb-24 sm:px-8 sm:pb-32 lg:justify-center lg:pb-36">
-          <div className="max-w-2xl">
-            <h1 className="font-display text-[2.6rem] leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl lg:text-[4.4rem]">
+          <div className="max-w-[56rem]">
+            <h1 className="font-display text-[2.6rem] leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl lg:text-[4.25rem]">
               Instalatér a topenář pro Plzeň a okolí
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/85 sm:text-xl">
-              Rozvody vody, topení a odpadů v domech, bytech i větších objektech. Podlahové topení, radiátory,
-              kanalizace. Všechno, co tu vidíte, jsem dělal já.
+              Rozvody vody, topení a odpadů v domech i bytech. Všechny fotky na webu jsou z mých zakázek.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
                 href={firma.telHref}
-                className="hidden rounded-sm bg-red px-6 py-4 font-display text-lg font-bold text-white hover:bg-red-dark lg:inline-block"
+                className="hidden bg-red active:translate-y-px px-6 py-4 font-display text-lg font-bold text-white hover:bg-red-dark lg:inline-block"
               >
                 Zavolat {firma.tel}
               </a>
               <Link
                 href="/zakazky"
-                className="rounded-sm border border-white/40 px-6 py-4 font-display text-lg font-bold text-white hover:border-white hover:bg-white/10"
+                className="border border-white/40 active:translate-y-px px-6 py-4 font-display text-lg font-bold text-white hover:border-white hover:bg-white/10"
               >
                 Fotky ze zakázek
               </Link>
@@ -113,11 +111,7 @@ export default function Home() {
               key={d.tvrzeni}
               className={`border-b border-line py-6 sm:border-b-0 ${i < 2 ? "sm:border-r sm:pr-6" : ""} ${i > 0 ? "sm:pl-6" : ""}`}
             >
-              <span aria-hidden className="flex w-7 flex-col gap-[3px]">
-                <span className="h-[3px] bg-logo-red" />
-                <span className="h-[3px] bg-pipe-blue" />
-              </span>
-              <dt className="mt-3 font-display text-lg font-bold">{d.tvrzeni}</dt>
+              <dt className="font-display text-lg font-bold">{d.tvrzeni}</dt>
               <dd className="mt-1 text-[0.9375rem] text-muted">
                 {d.detail}
                 {d.odkaz && (
@@ -132,11 +126,11 @@ export default function Home() {
       </div>
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
-        <div className="grid gap-6 md:grid-cols-[1fr_1fr] md:items-end md:gap-14">
+        <div className="max-w-2xl">
           <h2 className="font-display text-3xl leading-tight font-bold text-balance sm:text-[2.6rem]">
             Nejdůležitější část práce skončí ve zdi
           </h2>
-          <p className="text-lg text-muted">
+          <p className="mt-5 text-lg text-muted">
             Trubky pod omítkou nebo v podlaze už nikdo neuvidí, ale budete s nimi bydlet desítky let. Takhle vypadá
             rekonstrukce, než se to zazdí. Fotky jsou z různých zakázek.
           </p>
@@ -146,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-plaster">
+      <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
           <h2 className="font-display text-3xl leading-tight font-bold sm:text-[2.6rem]">Co pro vás udělám</h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -154,7 +148,7 @@ export default function Home() {
               <Link
                 key={o.href}
                 href={o.href}
-                className="group flex flex-col border-b-4 border-transparent bg-paper hover:border-logo-red"
+                className="group flex flex-col border-b-4 border-transparent bg-plaster hover:border-logo-red"
               >
                 <Image
                   src={o.foto.src}
@@ -181,7 +175,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-ink text-white">
+      <section className="bg-plaster">
         <div className="grid lg:grid-cols-2">
           <Image
             src={fotky.podlahovkaPokoj.src}
@@ -195,15 +189,15 @@ export default function Home() {
             <h2 className="max-w-md font-display text-3xl leading-tight font-bold sm:text-[2.6rem]">
               Podlahové topení od desky po rozdělovač
             </h2>
-            <p className="mt-5 max-w-md text-lg text-white/75">
+            <p className="mt-5 max-w-md text-lg text-muted">
               Pravidelná rozteč smyček a okrajový pásek u každé stěny, aby podlaha hřála rovnoměrně. Celá přízemí
               domů i jednotlivé koupelny při rekonstrukci.
             </p>
             <Link
               href="/topenar-plzen"
-              className="mt-8 self-start font-semibold underline decoration-logo-red decoration-2 underline-offset-[6px] hover:decoration-white"
+              className="mt-8 self-start font-semibold text-red underline underline-offset-4 hover:text-red-dark"
             >
-              Topení a podlahovky
+              Podrobně o topení
             </Link>
           </div>
         </div>
@@ -230,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-plaster">
+      <section className="border-t border-line">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1.2fr_1fr] md:gap-16 md:py-24">
           <div className="flex gap-6">
             <Image src="/logo.png" alt="" width={96} height={96} className="hidden size-24 shrink-0 sm:block" />
@@ -251,10 +245,11 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-display text-xl font-bold">Kam jezdím</h3>
-            <ul className="mt-4 border-t border-ink/15">
+            <p className="mt-2 text-muted">Celý Plzeňský kraj, sídlo mám ve Zbůchu.</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
               {pusobnost.map((o) => (
-                <li key={o} className="border-b border-ink/15 py-2.5">
-                  {o === "Plzeň-město" ? "Plzeň" : `okres ${o}`}
+                <li key={o} className="border border-ink/15 px-3.5 py-1.5">
+                  {o === "Plzeň-město" ? "Plzeň" : o}
                 </li>
               ))}
             </ul>

@@ -75,9 +75,9 @@ export default function InstalaterPlzen() {
 
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-          <div className="grid gap-6 md:grid-cols-[1fr_1.2fr] md:gap-14">
+          <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Kanalizace ve větším objektu</h2>
-            <p className="text-lg text-muted">
+            <p className="mt-5 text-lg text-muted">
               Nové ležaté potrubí podél zdí, stoupačky v drážkách a prostupy zdmi. Takhle to vypadá, než se podlaha
               zalije a drážky zapraví.
             </p>
