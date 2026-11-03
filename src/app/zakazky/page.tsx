@@ -91,7 +91,7 @@ export default function Zakazky() {
         focus="50% 40%"
         perex={
           <p>
-            Žádné fotky z fotobanky. Všechno, co tu vidíte, jsou moje zakázky, většinou ve fázi, kdy jsou rozvody ještě
+            Moje zakázky, většinou ve fázi, kdy jsou rozvody ještě
             vidět. Kliknutím se fotka zvětší.
           </p>
         }

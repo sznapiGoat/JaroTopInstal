@@ -46,7 +46,7 @@ const faze: Faze[] = [
 ];
 
 const duvody = [
-  { tvrzeni: "Fotky jen z mých zakázek", detail: "Žádná fotobanka. Rozvody, jak vypadají před omítkou." },
+  { tvrzeni: "Rychlý termín a uklizeno", detail: "Zákazníci chválí rychlou reakci a čistotu po práci." },
   { tvrzeni: "Přes 15 let v oboru", detail: "Velkou část z toho na stavbách v Německu." },
   { tvrzeni: "100 % na Poptávej.cz", detail: "Kvalita, komunikace i poměr ceny a výkonu." },
 ];
@@ -85,7 +85,7 @@ export default function Home() {
               <span>pro Plzeň a okolí</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg text-white/90 sm:text-xl">
-              Rozvody vody, topení a odpadů v domech i bytech. Všechny fotky na webu jsou z mých zakázek.
+              Rozvody vody, topení a odpadů v domech i bytech. Plzeň a celý Plzeňský kraj.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
