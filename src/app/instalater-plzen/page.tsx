@@ -69,14 +69,14 @@ export default function InstalaterPlzen() {
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-        <h2 className="mb-8 font-display text-3xl font-bold sm:text-4xl">Co dělám</h2>
+        <h2 className="mb-8 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Co dělám</h2>
         <TabulkaSluzeb radky={sluzby} />
       </section>
 
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Kanalizace ve větším objektu</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Kanalizace ve větším objektu</h2>
             <p className="mt-5 text-lg text-muted">
               Nové ležaté potrubí podél zdí, stoupačky v drážkách a prostupy zdmi. Takhle to vypadá, než se podlaha
               zalije a drážky zapraví.
@@ -100,7 +100,7 @@ export default function InstalaterPlzen() {
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-14">
           <div>
-            <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Koupelna před obkladem</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Koupelna před obkladem</h2>
             <p className="mt-5 text-lg text-muted">
               Při rekonstrukci koupelny se nejdřív odkryje podlaha a staré rozvody. Pak přijde nový odpad, přívody a
               modul pro závěsné WC. Teprve potom jde na řadu obkladač.

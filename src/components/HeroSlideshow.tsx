@@ -118,7 +118,7 @@ export function HeroSlideshow({ slides }: { slides: Slide[] }) {
                     aria-label={`${s.obor}: ${s.popis}`}
                     className="group block w-full pt-3 text-left"
                   >
-                    <span className="relative block h-[3px] overflow-hidden bg-white/25 group-hover:bg-white/45">
+                    <span className="relative block h-[2px] overflow-hidden rounded-full bg-white/25 group-hover:bg-white/45">
                       <span
                         key={current ? `on-${index}` : "off"}
                         className={[
@@ -130,12 +130,12 @@ export function HeroSlideshow({ slides }: { slides: Slide[] }) {
                       />
                     </span>
                     <span
-                      className={`mt-2.5 hidden truncate text-sm font-semibold md:block ${current ? "text-white" : "text-white/55 group-hover:text-white/85"}`}
+                      className={`mt-2 hidden truncate text-xs font-semibold md:block ${current ? "text-white" : "text-white/55 group-hover:text-white/85"}`}
                     >
                       {s.obor}
                     </span>
                     <span
-                      className={`mt-0.5 hidden truncate text-[0.8125rem] lg:block ${current ? "text-white/75" : "text-white/40 group-hover:text-white/65"}`}
+                      className={`mt-0.5 hidden truncate text-[0.6875rem] lg:block ${current ? "text-white/75" : "text-white/40 group-hover:text-white/65"}`}
                     >
                       {s.popis}
                     </span>
@@ -148,7 +148,7 @@ export function HeroSlideshow({ slides }: { slides: Slide[] }) {
             type="button"
             onClick={() => setPaused((p) => !p)}
             aria-pressed={paused}
-            className="shrink-0 text-[0.8125rem] font-medium text-white/70 underline-offset-4 hover:text-white hover:underline motion-reduce:hidden"
+            className="shrink-0 text-xs font-medium text-white/60 underline-offset-4 hover:text-white hover:underline motion-reduce:hidden"
           >
             {paused ? "Spustit" : "Pozastavit"}
           </button>

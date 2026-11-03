@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Mona_Sans, Onest } from "next/font/google";
+import { Red_Hat_Display, Red_Hat_Text } from "next/font/google";
 import { Header, Footer, MobilZavolat } from "@/components/Chrome";
 import { JsonLd, firmaSchema } from "@/components/Seo";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const mona = Mona_Sans({
-  variable: "--font-mona",
+const display = Red_Hat_Display({
+  variable: "--font-rh-display",
   subsets: ["latin", "latin-ext"],
-  axes: ["wdth"],
 });
 
-const onest = Onest({
-  variable: "--font-onest",
+const text = Red_Hat_Text({
+  variable: "--font-rh-text",
   subsets: ["latin", "latin-ext"],
 });
 
@@ -39,7 +38,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="cs" className={`${mona.variable} ${onest.variable} antialiased`}>
+    <html lang="cs" className={`${display.variable} ${text.variable} antialiased`}>
       <body>
         <JsonLd data={firmaSchema} />
         <Header />

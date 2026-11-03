@@ -65,7 +65,7 @@ export function Prubeh({ faze }: { faze: Faze[] }) {
             onClick={() => posun(-1)}
             disabled={zacatek}
             aria-label="Předchozí fáze"
-            className="grid size-11 place-items-center border border-ink/20 text-xl hover:border-ink disabled:opacity-30"
+            className="grid size-12 place-items-center rounded-full bg-plaster text-2xl hover:bg-ink hover:text-white disabled:opacity-30 disabled:hover:bg-plaster disabled:hover:text-ink"
           >
             ‹
           </button>
@@ -74,7 +74,7 @@ export function Prubeh({ faze }: { faze: Faze[] }) {
             onClick={() => posun(1)}
             disabled={konec}
             aria-label="Další fáze"
-            className="grid size-11 place-items-center border border-ink/20 text-xl hover:border-ink disabled:opacity-30"
+            className="grid size-12 place-items-center rounded-full bg-plaster text-2xl hover:bg-ink hover:text-white disabled:opacity-30 disabled:hover:bg-plaster disabled:hover:text-ink"
           >
             ›
           </button>
@@ -94,10 +94,10 @@ export function Prubeh({ faze }: { faze: Faze[] }) {
               width={f.foto.w}
               height={f.foto.h}
               sizes="(min-width: 1024px) 320px, (min-width: 640px) 46vw, 82vw"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full rounded-xl object-cover"
             />
             <h3
-              className={`mt-4 font-display text-xl font-bold transition-colors ${i === aktivni ? "text-ink" : "text-ink/70"}`}
+              className={`mt-4 font-display text-xl font-extrabold transition-colors ${i === aktivni ? "text-ink" : "text-ink/70"}`}
             >
               {f.nazev}
             </h3>

@@ -1,39 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import { firma, navigace } from "@/lib/site";
-import { NavLink } from "./NavLink";
+import { MobilMenu, NavLink } from "./NavLink";
 
+/**
+ * Plovoucí bílá pilulka nad obsahem. Hlavička je fixní, takže první sekce
+ * každé stránky si nechává nahoře místo (pt-28 a víc).
+ */
 export function Header() {
   return (
-    <header className="border-b border-line bg-paper">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="" width={52} height={52} priority className="size-12 sm:size-[52px]" />
-          <span className="leading-tight">
-            <span className="block font-display text-xl font-bold">Jaro TopInstal</span>
-            <span className="block text-sm text-muted">instalatér a topenář, Plzeň</span>
-          </span>
+    <header className="fixed inset-x-0 top-0 z-30 px-3 pt-3 sm:px-5">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full bg-paper py-2 pr-2 pl-3 shadow-[0_6px_24px_rgb(20_20_20/0.10)] sm:pl-4">
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image src="/logo.png" alt="" width={44} height={44} priority className="size-10 sm:size-11" />
+          <span className="font-display text-lg font-extrabold tracking-tight sm:text-xl">Jaro TopInstal</span>
         </Link>
-        <nav aria-label="Hlavní" className="hidden items-center gap-7 font-medium lg:flex">
+        <nav aria-label="Hlavní" className="hidden items-center gap-1 font-medium lg:flex">
           {navigace.map((n) => (
             <NavLink key={n.href} href={n.href}>
               {n.label}
             </NavLink>
           ))}
         </nav>
-        <a href={firma.telHref} className="hidden font-display text-xl font-bold whitespace-nowrap sm:block">
+        <a
+          href={firma.telHref}
+          className="hidden rounded-full bg-red px-5 py-2.5 font-display font-bold whitespace-nowrap text-white hover:bg-red-dark active:translate-y-px lg:block"
+        >
           {firma.tel}
         </a>
+        <MobilMenu />
       </div>
-      <nav aria-label="Hlavní (mobil)" className="border-t border-line lg:hidden">
-        <ul className="mx-auto flex max-w-6xl justify-between gap-4 overflow-x-auto px-5 py-3 text-[0.9375rem] font-medium whitespace-nowrap sm:justify-start sm:gap-8 sm:px-8">
-          {navigace.map((n) => (
-            <li key={n.href}>
-              <NavLink href={n.href}>{n.label}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 }
@@ -46,26 +42,24 @@ export function KontaktPas({
   text?: string;
 }) {
   return (
-    <section className="bg-ink text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-[1.1fr_1fr] md:items-end md:py-24">
-        <div>
-          <h2 className="font-display text-3xl leading-tight font-bold text-balance sm:text-4xl">{nadpis}</h2>
-          <p className="mt-4 max-w-md text-lg text-white/75">{text}</p>
-        </div>
-        <div>
-          <a
-            href={firma.telHref}
-            className="block font-display text-5xl leading-none font-bold tracking-tight underline decoration-logo-red decoration-[6px] underline-offset-[12px] sm:text-7xl"
-          >
-            {firma.tel}
+    <section className="bg-plaster">
+      <div className="mx-auto max-w-3xl px-5 py-20 text-center sm:px-8 md:py-24">
+        <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight text-balance sm:text-4xl">
+          {nadpis}
+        </h2>
+        <p className="mx-auto mt-4 max-w-lg text-lg text-muted">{text}</p>
+        <a
+          href={firma.telHref}
+          className="mt-8 inline-block rounded-full bg-red px-8 py-4 font-display text-xl font-bold text-white hover:bg-red-dark active:translate-y-px sm:text-2xl"
+        >
+          Zavolat {firma.tel}
+        </a>
+        <p className="mt-6 text-muted">
+          nebo e-mail{" "}
+          <a href={`mailto:${firma.email}`} className="font-semibold text-ink underline underline-offset-4 hover:text-red">
+            {firma.email}
           </a>
-          <p className="mt-8 text-lg text-white/75">
-            E-mail{" "}
-            <a href={`mailto:${firma.email}`} className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-logo-red">
-              {firma.email}
-            </a>
-          </p>
-        </div>
+        </p>
       </div>
     </section>
   );
@@ -74,13 +68,18 @@ export function KontaktPas({
 export function Footer() {
   return (
     <footer className="bg-ink pb-28 text-sm text-white/65 lg:pb-0">
-      <div className="mx-auto grid max-w-6xl gap-6 border-t border-white/10 px-5 py-8 sm:grid-cols-[1fr_auto] sm:px-8">
-        <p>
-          {firma.pravniNazev}, {firma.ulice}, {firma.psc} {firma.obec}
-          <br />
-          IČO {firma.ico}, DIČ {firma.dic}
-        </p>
-        <ul className="flex flex-wrap gap-x-6 gap-y-2">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-[1fr_auto] sm:px-8">
+        <div className="flex items-start gap-4">
+          <Image src="/logo.png" alt="" width={56} height={56} className="size-14 rounded-full bg-white" />
+          <p>
+            <span className="font-display text-base font-bold text-white">{firma.pravniNazev}</span>
+            <br />
+            {firma.ulice}, {firma.psc} {firma.obec}
+            <br />
+            IČO {firma.ico}, DIČ {firma.dic}
+          </p>
+        </div>
+        <ul className="flex flex-wrap gap-x-6 gap-y-2 sm:justify-end">
           {navigace.map((n) => (
             <li key={n.href}>
               <Link href={n.href} className="hover:text-white">
@@ -101,8 +100,11 @@ export function Footer() {
 
 export function MobilZavolat() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-paper p-3 lg:hidden">
-      <a href={firma.telHref} className="block bg-red active:translate-y-px py-3.5 text-center font-display text-lg font-bold text-white">
+    <div className="fixed inset-x-0 bottom-0 z-20 p-3 lg:hidden">
+      <a
+        href={firma.telHref}
+        className="block rounded-full bg-red py-3.5 text-center font-display text-lg font-bold text-white shadow-[0_6px_24px_rgb(20_20_20/0.18)] active:translate-y-px"
+      >
         Zavolat {firma.tel}
       </a>
     </div>

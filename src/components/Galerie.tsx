@@ -54,9 +54,9 @@ export function Galerie({
               <button
                 type="button"
                 onClick={() => otevrit(n)}
-                className="flex h-full w-full flex-col border-b-[3px] border-transparent text-left hover:border-logo-red"
+                className="group flex h-full w-full flex-col text-left"
               >
-                <span className={`relative block w-full ${velka ? "aspect-[4/3] lg:aspect-auto lg:flex-1" : siroka ? `${pomer} lg:aspect-[8.1/3]` : pomer}`}>
+                <span className={`relative block w-full overflow-hidden rounded-xl ${velka ? "aspect-[4/3] lg:aspect-auto lg:flex-1" : siroka ? `${pomer} lg:aspect-[8.1/3]` : pomer}`}>
                   <Image
                     src={foto.src}
                     alt={foto.alt}
@@ -65,7 +65,7 @@ export function Galerie({
                     className="object-cover"
                   />
                 </span>
-                <span className="block py-2 text-sm text-muted">{foto.popis}</span>
+                <span className="block py-2.5 text-sm text-muted group-hover:text-ink">{foto.popis}</span>
               </button>
             </li>
           );

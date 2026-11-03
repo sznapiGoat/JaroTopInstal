@@ -69,14 +69,14 @@ export default function TopenarPlzen() {
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-        <h2 className="mb-8 font-display text-3xl font-bold sm:text-4xl">Co dělám</h2>
+        <h2 className="mb-8 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Co dělám</h2>
         <TabulkaSluzeb radky={sluzby} />
       </section>
 
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Podlahové topení</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Podlahové topení</h2>
             <p className="mt-5 text-lg text-muted">
               Smyčky kladené do šneku s pravidelnou roztečí, aby podlaha hřála rovnoměrně od okna po dveře. Na fotkách
               přízemí rodinného domu a malá koupelna.
@@ -116,7 +116,7 @@ export default function TopenarPlzen() {
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
         <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-14">
           <div>
-            <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Jak práce probíhá</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Jak práce probíhá</h2>
             <p className="mt-5 text-lg text-muted">Od první prohlídky po teplý radiátor.</p>
           </div>
           <ol className="relative">
@@ -124,7 +124,7 @@ export default function TopenarPlzen() {
             <span aria-hidden className="absolute top-2 bottom-2 left-3 w-[5px] rounded-full bg-pipe-blue" />
             {postup.map(([krok, popis]) => (
               <li key={krok} className="pb-9 pl-12 last:pb-0">
-                <h3 className="font-display text-xl font-bold">{krok}</h3>
+                <h3 className="font-display text-xl font-extrabold tracking-tight">{krok}</h3>
                 <p className="mt-1.5 text-muted">{popis}</p>
               </li>
             ))}
@@ -135,7 +135,7 @@ export default function TopenarPlzen() {
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">Nové radiátory a rozvody</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Nové radiátory a rozvody</h2>
             <p className="mt-5 text-lg text-muted">
               Výměna radiátorů v rodinném domě a v panelovém bytě. Trasy v drážce se po zapravení ztratí, zůstane jen
               radiátor pod oknem.

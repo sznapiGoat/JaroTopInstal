@@ -96,13 +96,13 @@ export default function Zakazky() {
           </p>
         }
       />
-      <nav aria-label="Skupiny zakázek" className="sticky top-0 z-10 border-b border-line bg-paper/95 backdrop-blur-sm">
+      <nav aria-label="Skupiny zakázek" className="sticky top-[4.75rem] z-10 bg-paper/95 backdrop-blur-sm">
         <ul className="no-scrollbar mx-auto flex max-w-6xl gap-2 overflow-x-auto px-5 py-3 sm:px-8">
           {skupiny.map((s) => (
             <li key={s.id} className="shrink-0">
               <a
                 href={`#${s.id}`}
-                className="block border border-ink/15 px-4 py-2 text-[0.9375rem] font-medium whitespace-nowrap hover:border-ink"
+                className="block rounded-full bg-plaster px-4 py-2 text-[0.9375rem] font-semibold whitespace-nowrap hover:bg-ink hover:text-white"
               >
                 {s.kratce}
                 <span className="ml-2 text-muted">{s.fotky.length}</span>
@@ -115,10 +115,10 @@ export default function Zakazky() {
         <section
           key={s.id}
           id={s.id}
-          className={`scroll-mt-16 ${n % 2 === 0 ? "" : "bg-plaster"} ${n === 0 ? "" : "border-t border-line"}`}
+          className={`scroll-mt-36 ${n % 2 === 0 ? "" : "bg-plaster"} ${n === 0 ? "" : "border-t border-line"}`}
         >
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
-            <h2 className="font-display text-2xl leading-tight font-bold sm:text-3xl">{s.nadpis}</h2>
+            <h2 className="font-display text-2xl leading-tight font-extrabold tracking-tight sm:text-3xl">{s.nadpis}</h2>
             <p className="mt-3 max-w-2xl text-muted">{s.text}</p>
             <div className="mt-10">
               <Galerie fotky={s.fotky} mozaika={s.fotky.length >= 5} />
