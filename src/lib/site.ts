@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jaro-topinstal.vercel.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jarotopinstal.vercel.app";
 
 export const firma = {
   nazev: "Jaro TopInstal",
