@@ -46,13 +46,13 @@ export function HlavickaStranky({
           <h1 className="font-display text-[2.1rem] leading-[1.24] font-black tracking-tight sm:text-5xl sm:leading-[1.22] lg:text-[3.3rem]">
             {nadpis.includes(":") ? (
               <>
-                <span className="blok">{nadpis.split(":")[0]}</span>
-                <span className="mt-2 block pl-[0.39em] text-[0.56em] leading-[1.32]">
+                <span className="linka">{nadpis.split(":")[0]}</span>
+                <span className="mt-3 block text-[0.56em] leading-[1.32]">
                   <span className="[text-shadow:0_2px_18px_rgb(0_0_0/0.35)]">{nadpis.split(":").slice(1).join(":").trim()}</span>
                 </span>
               </>
             ) : (
-              <span className="blok">{nadpis}</span>
+              <span className="linka">{nadpis}</span>
             )}
           </h1>
           <div className="mt-6 text-lg text-white/85 sm:text-xl">{perex}</div>

@@ -36,7 +36,7 @@ export default function Kontakt() {
       <Drobecky kroky={[{ href: "/kontakt", label: "Kontakt" }]} />
       <div className="mt-8 grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
         <div className="min-w-0">
-          <h1 className="font-display text-[2.3rem] leading-[1.2] font-black tracking-tight sm:text-5xl"><span className="blok">Kontakt</span></h1>
+          <h1 className="font-display text-[2.3rem] leading-[1.2] font-black tracking-tight sm:text-5xl"><span className="linka">Kontakt</span></h1>
           <p className="mt-6 max-w-lg text-lg text-muted">
             Zavolejte a popište, co potřebujete. Když to nevezmu, jsem nejspíš na stavbě a ozvu se zpátky. U větší
             zakázky pomůžou fotky poslané e-mailem.

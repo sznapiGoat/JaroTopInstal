@@ -79,10 +79,10 @@ export default function Home() {
         <HeroSlideshow slides={slides} />
         <div className="relative z-[5] mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pt-32 pb-24 sm:px-8 sm:pb-32 lg:justify-center lg:pb-36">
           <div className="max-w-[50rem]">
-            <h1 className="font-display text-[2.35rem] leading-[1.14] font-black tracking-tight sm:text-6xl lg:text-[4.1rem]">
-              <span className="blok">Instalatér a topenář</span>
+            <h1 className="font-display text-[2.35rem] leading-[1.14] font-black [text-shadow:0_2px_22px_rgb(0_0_0/0.35)] tracking-tight sm:text-6xl lg:text-[4.1rem]">
+              <span className="linka">Instalatér a topenář</span>
               <br />
-              <span className="inline-block pl-[0.22em] [text-shadow:0_2px_18px_rgb(0_0_0/0.35)]">pro Plzeň a okolí</span>
+              <span>pro Plzeň a okolí</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg text-white/90 sm:text-xl">
               Rozvody vody, topení a odpadů v domech i bytech. Všechny fotky na webu jsou z mých zakázek.

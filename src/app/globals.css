@@ -37,6 +37,14 @@ body {
   Nadpis v červených blocích, každý řádek má vlastní blok (jako štítky na dodávce).
   box-decoration-break drží odsazení i na zalomeném řádku.
 */
+/* Hlavní nadpisy: bílý (nebo tmavý) text, červená linka pod prvním řádkem */
+.linka {
+  text-decoration: underline;
+  text-decoration-color: var(--color-logo-red);
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.16em;
+}
+
 .blok {
   background: var(--color-red);
   color: #fff;
