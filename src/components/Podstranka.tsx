@@ -47,8 +47,8 @@ export function HlavickaStranky({
             {nadpis.includes(":") ? (
               <>
                 <span className="blok">{nadpis.split(":")[0]}</span>
-                <span className="mt-2 block text-[0.56em] leading-[1.32]">
-                  <span className="blok-svetly">{nadpis.split(":").slice(1).join(":").trim()}</span>
+                <span className="mt-2 block pl-[0.39em] text-[0.56em] leading-[1.32]">
+                  <span className="[text-shadow:0_2px_18px_rgb(0_0_0/0.35)]">{nadpis.split(":").slice(1).join(":").trim()}</span>
                 </span>
               </>
             ) : (

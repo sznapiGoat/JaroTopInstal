@@ -44,13 +44,6 @@ body {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-.blok-svetly {
-  background: #fff;
-  color: var(--color-ink);
-  padding: 0.02em 0.22em 0.06em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
 
 /* Hero: fotka se během zobrazení pomalu přiblíží a posune, sudé a liché opačně. */
 .kenburns-a {
