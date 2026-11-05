@@ -6,10 +6,10 @@ import { Prubeh, type Faze } from "@/components/Prubeh";
 import { firma, fotky, pusobnost, reference, type Foto } from "@/lib/site";
 
 const slides: Slide[] = [
-  { foto: fotky.rozvodyStena, obor: "Rozvody vody a topení", popis: "Rekonstrukce domu, před omítkou", focus: "45% 40%" },
+  { foto: fotky.rozvodyStena, obor: "Rozvody vody a topení", popis: "Nové rozvody před omítkou", focus: "45% 40%" },
   { foto: fotky.podlahovkaPokoj, obor: "Podlahové topení", popis: "Pravidelná rozteč až ke stěně", focus: "50% 70%" },
   { foto: fotky.radiatorNapojeni, obor: "Radiátory", popis: "Napojení z drážky ve zdi", focus: "62% 55%" },
-  { foto: fotky.kanalizaceHlavni, obor: "Kanalizace", popis: "Ležaté potrubí ve větším objektu", focus: "35% 55%" },
+  { foto: fotky.rozvodyPodStropem, obor: "Rekonstrukce", popis: "Nová trasa pod stropem", focus: "50% 45%" },
 ];
 
 const faze: Faze[] = [
@@ -24,9 +24,9 @@ const faze: Faze[] = [
     foto: fotky.rozvodyRoh,
   },
   {
-    nazev: "Odpady",
-    text: "Nové odpadní potrubí podél zdi, napojené na ležatou kanalizaci.",
-    foto: fotky.kanalizacePodelZdi,
+    nazev: "Koupelna",
+    text: "Nový odpad a modul pro závěsné WC, než přijde obkladač.",
+    foto: fotky.wcGeberit,
   },
   {
     nazev: "Podlahové topení",
@@ -58,7 +58,7 @@ const obory: { stitek: string; nadpis: string; text: string; href: string; odkaz
     text: "Od zapojení myčky po nové rozvody celého domu. Ucpané odpady, bojlery a technická část koupelny včetně modulu pro závěsné WC.",
     href: "/instalater-plzen",
     odkaz: "Podrobně o vodě a odpadech",
-    foto: fotky.kanalizaceOdbocky,
+    foto: fotky.koupelnaBourani,
     polozky: ["Rozvody vody", "Odpady a kanalizace", "Čištění odpadů", "Bojlery", "Koupelny"],
   },
   {

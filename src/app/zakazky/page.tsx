@@ -7,7 +7,7 @@ import { fotky, type Foto } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Zakázky: fotky z rozvodů vody, topení a kanalizace",
   description:
-    "Fotky z vlastních zakázek Jaro TopInstal: rozvody vody a topení při rekonstrukci, podlahové topení, výměna radiátorů a kanalizace ve větším objektu. Plzeň a okolí.",
+    "Fotky z vlastních zakázek Jaro TopInstal: rozvody vody a topení při rekonstrukci, podlahové topení, výměna radiátorů a koupelny. Plzeň a okolí.",
   alternates: { canonical: "/zakazky" },
 };
 
@@ -15,7 +15,7 @@ const skupiny: { id: string; kratce: string; nadpis: string; text: string; fotky
   {
     id: "rozvody",
     kratce: "Rozvody",
-    nadpis: "Rozvody vody a topení při rekonstrukci domu",
+    nadpis: "Rozvody vody a topení při rekonstrukci",
     text: "Nové trasy pod stropem, v rozích a v podlaze. Souběh trubek v objímkách, než přijde omítka.",
     fotky: [
       fotky.rozvodyPodStropem,
@@ -30,7 +30,7 @@ const skupiny: { id: string; kratce: string; nadpis: string; text: string; fotky
     id: "podlahove-topeni",
     kratce: "Podlahové topení",
     nadpis: "Podlahové topení",
-    text: "Celé přízemí rodinného domu i malá koupelna.",
+    text: "Větší místnosti i malá koupelna.",
     fotky: [
       fotky.podlahovkaPokoj,
       fotky.podlahovkaObyvak,
@@ -42,8 +42,8 @@ const skupiny: { id: string; kratce: string; nadpis: string; text: string; fotky
   {
     id: "radiatory",
     kratce: "Radiátory",
-    nadpis: "Radiátory a pokoje po dokončení",
-    text: "Rozvody v drážce, nové radiátory a pokoje, když už je hotovo.",
+    nadpis: "Radiátory a přípojky v drážce",
+    text: "Přípojky vedené v drážce ve zdi a nové radiátory pod okny.",
     fotky: [
       fotky.radiatorRozvodVeZdi,
       fotky.radiatorNapojeni,
@@ -53,23 +53,6 @@ const skupiny: { id: string; kratce: string; nadpis: string; text: string; fotky
       fotky.pokojHotovo2,
       fotky.radiatorPanelak,
       fotky.radiatorPanelak2,
-    ],
-  },
-  {
-    id: "kanalizace",
-    kratce: "Kanalizace",
-    nadpis: "Kanalizace a rozvody ve větším objektu",
-    text: "Ležaté potrubí, stoupačky a prostupy zdmi.",
-    fotky: [
-      fotky.kanalizaceHlavni,
-      fotky.kanalizacePodelZdi,
-      fotky.kanalizaceOdbocky,
-      fotky.kanalizaceSouber,
-      fotky.kanalizaceStoupacka,
-      fotky.kanalizaceRoh,
-      fotky.rozvodyObjekt,
-      fotky.kanalizaceDetail,
-      fotky.rozvodyObjektRoh,
     ],
   },
   {

@@ -8,7 +8,7 @@ import { fotky } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Topenář Plzeň: podlahové topení, radiátory, rozvody",
   description:
-    "Topenář pro Plzeň a okolí: podlahové topení, nové rozvody topení, výměna radiátorů a napojení zdroje tepla. Rodinné domy, byty i panelové domy. Jaro TopInstal, tel. 722 909 605.",
+    "Topenář pro Plzeň a okolí: podlahové topení, nové rozvody topení, výměna radiátorů a napojení zdroje tepla. Rodinné domy i byty. Jaro TopInstal, tel. 722 909 605.",
   alternates: { canonical: "/topenar-plzen" },
 };
 
@@ -43,10 +43,6 @@ const otazky: Otazka[] = [
     a: "Když stávající rozvody vyhovují, vyměním jen radiátory a připojení. Když jsou staré, vedu nové trasy v drážce, jako na fotkách níže.",
   },
   {
-    q: "Pracujete i v panelových domech?",
-    a: "Ano, radiátory v panelových bytech měním a napojuji na stávající stoupačky.",
-  },
-  {
     q: "Jezdíte i mimo Plzeň?",
     a: "Ano. Sídlo mám ve Zbůchu a jezdím po celém Plzeňském kraji: Plzeň-sever, Plzeň-jih, Rokycany, Tachov, Domažlice a Klatovy.",
   },
@@ -79,7 +75,7 @@ export default function TopenarPlzen() {
             <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Podlahové topení</h2>
             <p className="mt-5 text-lg text-muted">
               Smyčky kladené do šneku s pravidelnou roztečí, aby podlaha hřála rovnoměrně od okna po dveře. Na fotkách
-              přízemí rodinného domu a malá koupelna.
+              větší místnosti i malá koupelna.
             </p>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-[1.5fr_1fr]">
@@ -137,7 +133,7 @@ export default function TopenarPlzen() {
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Nové radiátory a rozvody</h2>
             <p className="mt-5 text-lg text-muted">
-              Výměna radiátorů v rodinném domě a v panelovém bytě. Trasy v drážce se po zapravení ztratí, zůstane jen
+              Nové radiátory a přípojky v drážce. Trasy v drážce se po zapravení ztratí, zůstane jen
               radiátor pod oknem.
             </p>
           </div>

@@ -19,7 +19,7 @@ const sluzby: [string, string][] = [
   ],
   [
     "Odpady a kanalizace",
-    "Vnitřní odpady, stoupačky a ležatá kanalizace, i ve větších objektech. Napojení kuchyně, koupelny a WC na stávající nebo novou kanalizaci.",
+    "Vnitřní odpady a napojení kuchyně, koupelny a WC na stávající nebo novou kanalizaci.",
   ],
   [
     "Čištění odpadů",
@@ -60,12 +60,12 @@ export default function InstalaterPlzen() {
         nadpis="Instalatér Plzeň: voda, odpady a kanalizace"
         perex={
           <p>
-            Od zapojení myčky po kompletní rozvody vody a kanalizace v domě. Pracuji v Plzni a po celém kraji, v
-            rodinných domech, bytech i větších objektech.
+            Od zapojení myčky po kompletní rozvody vody a odpadů v domě. Pracuji v Plzni a po celém kraji, v
+            rodinných domech i bytech.
           </p>
         }
-        foto={fotky.kanalizaceSouber}
-        focus="40% 60%"
+        foto={fotky.rozvodyKoupelnaPodlaha}
+        focus="50% 60%"
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
@@ -76,21 +76,21 @@ export default function InstalaterPlzen() {
       <section className="bg-plaster">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Kanalizace ve větším objektu</h2>
+            <h2 className="font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">Nové rozvody při rekonstrukci</h2>
             <p className="mt-5 text-lg text-muted">
-              Nové ležaté potrubí podél zdí, stoupačky v drážkách a prostupy zdmi. Takhle to vypadá, než se podlaha
-              zalije a drážky zapraví.
+              Nové trasy v podlaze, v drážkách a pod stropem. Takhle to vypadá, než se drážky zapraví a položí
+              podlaha.
             </p>
           </div>
           <div className="mt-12">
             <Galerie
               fotky={[
-                fotky.kanalizacePodelZdi,
-                fotky.kanalizaceOdbocky,
-                fotky.kanalizaceStoupacka,
-                fotky.kanalizaceDetail,
-                fotky.rozvodyObjekt,
-                fotky.kanalizaceRoh,
+                fotky.rozvodyChodba,
+                fotky.rozvodyDetail,
+                fotky.rozvodPodelOkna,
+                fotky.rozvodyStenaNaradi,
+                fotky.rozvodyPodStropem,
+                fotky.rozvodyRoh,
               ]}
             />
           </div>

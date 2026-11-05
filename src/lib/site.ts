@@ -61,7 +61,7 @@ export const fotky = {
   rozvodyRoh: {
     src: "/foto/rozvody-roh.jpg", ...P,
     alt: "Červené a modré izolované trubky vedené souběžně po stěně a do rohu místnosti, uprostřed stěny zapuštěná krabice",
-    popis: "Nové rozvody při rekonstrukci domu, ještě před omítkou",
+    popis: "Nové rozvody, ještě před omítkou",
   },
   rozvodyStena: {
     src: "/foto/rozvody-stena.jpg", ...L,
@@ -100,8 +100,8 @@ export const fotky = {
   },
   podlahovkaDum: {
     src: "/foto/podlahovka-dum-prizemi.jpg", ...L,
-    alt: "Velká místnost v přízemí rodinného domu s hrubými betonovými stěnami, celá podlaha pokrytá systémovou deskou s položenými smyčkami podlahového topení",
-    popis: "Podlahové topení v celém přízemí",
+    alt: "Velká místnost s hrubými betonovými stěnami, celá podlaha pokrytá systémovou deskou s položenými smyčkami podlahového topení",
+    popis: "Podlahové topení v celé místnosti",
   },
   podlahovkaKoupelna: {
     src: "/foto/podlahovka-koupelna.jpg", ...L,
@@ -121,7 +121,7 @@ export const fotky = {
   podlahovkaCelek: {
     src: "/foto/podlahovka-celek.jpg", ...L,
     alt: "Přízemí rozestavěného domu se schodištěm v pozadí, podlaha celá pokrytá trubkami podlahového topení, v popředí zbytek role trubky",
-    popis: "Přízemí rodinného domu před zalitím",
+    popis: "Podlahové topení ve velké místnosti",
   },
   radiatorRozvodVeZdi: {
     src: "/foto/radiator-rozvod-ve-zdi.jpg", ...L,
@@ -146,17 +146,17 @@ export const fotky = {
   pokojHotovo: {
     src: "/foto/pokoj-hotovo.jpg", ...L,
     alt: "Hotový pokoj s laminátovou podlahou, bílými stěnami a radiátorem pod oknem se záclonou",
-    popis: "Pokoj po dokončení",
+    popis: "Pokoj s novým radiátorem",
   },
   pokojHotovo2: {
     src: "/foto/pokoj-hotovo-2.jpg", ...L,
     alt: "Hotový světlý pokoj s radiátorem pod oknem a novou podlahou, na zemi ještě vodováha a nářadí",
-    popis: "Hotovo, zbývá uklidit nářadí",
+    popis: "Radiátor pod oknem a nová podlaha",
   },
   radiatorPanelak: {
     src: "/foto/radiator-panelak.jpg", ...L,
-    alt: "Nový radiátor s ochrannými rohy z kartonu pod oknem bytu v panelovém domě, kolem nářadí",
-    popis: "Výměna radiátoru v panelovém bytě",
+    alt: "Nový radiátor s ochrannými rohy z kartonu pod oknem, kolem nářadí",
+    popis: "Montáž nového radiátoru",
   },
   radiatorPanelak2: {
     src: "/foto/radiator-panelak-2.jpg", ...L,
@@ -172,50 +172,5 @@ export const fotky = {
     src: "/foto/koupelna-bourani.jpg", ...P,
     alt: "Koupelna s modrým obkladem během bourání, v podlaze odkryté staré trubky a odpad, vedle radiátor",
     popis: "Původní rozvody po odkrytí podlahy",
-  },
-  kanalizaceHlavni: {
-    src: "/foto/kanalizace-hlavni-rad.jpg", ...L,
-    alt: "Nové šedé kanalizační potrubí vedené podél zdi na betonové podlaze ve větším objektu",
-    popis: "Ležatá kanalizace podél zdi",
-  },
-  kanalizacePodelZdi: {
-    src: "/foto/kanalizace-podel-zdi.jpg", ...P,
-    alt: "Šedé kanalizační potrubí s kolenem uložené u paty zdi z cihel",
-    popis: "Napojení svodu u paty zdi",
-  },
-  kanalizaceOdbocky: {
-    src: "/foto/kanalizace-odbocky.jpg", ...L,
-    alt: "Svazek nových šedých trubek s odbočkami vedený u cihlové zdi, vedle cihla a nářadí",
-    popis: "Souběh odpadu a přívodů",
-  },
-  kanalizaceSouber: {
-    src: "/foto/kanalizace-souber.jpg", ...L,
-    alt: "Dlouhá místnost s několika souběžnými šedými trubkami podél stěny, v pozadí nářadí a pytle s materiálem",
-    popis: "Několik tras v jednom souběhu",
-  },
-  kanalizaceStoupacka: {
-    src: "/foto/kanalizace-stoupacka.jpg", ...P,
-    alt: "Svislá drážka v rohu chodby s novým potrubím a oranžovými tvarovkami u podlahy",
-    popis: "Stoupací potrubí v rohu",
-  },
-  kanalizaceRoh: {
-    src: "/foto/kanalizace-roh.jpg", ...P,
-    alt: "Roh místnosti s vybouranou drážkou, šedé trubky a oranžové kolena položené u podlahy",
-    popis: "Rozvody v rohu před zazděním",
-  },
-  rozvodyObjekt: {
-    src: "/foto/rozvody-objekt.jpg", ...L,
-    alt: "Místnost ve větším objektu se souběhem šedých a bílých trubek v podlaze u zdi, okolo nářadí a pytle",
-    popis: "Rozvody ve větším objektu",
-  },
-  kanalizaceDetail: {
-    src: "/foto/kanalizace-detail-odbocky.jpg", ...P,
-    alt: "Detail průrazu ve zdi s šedou kanalizační trubkou a bílými plastovými trubkami s kolenem",
-    popis: "Detail prostupu zdí",
-  },
-  rozvodyObjektRoh: {
-    src: "/foto/rozvody-objekt-roh.jpg", ...P,
-    alt: "Svazek trubek ohnutý v pravém úhlu v rohu místnosti u podlahy, vedle desky izolace a vrtací kladivo",
-    popis: "Trasa v rohu, připravená na izolaci",
   },
 } satisfies Record<string, Foto>;
