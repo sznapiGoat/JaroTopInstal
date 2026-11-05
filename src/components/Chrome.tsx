@@ -1,38 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { firma, navigace } from "@/lib/site";
-import { MobilMenu, NavLink } from "./NavLink";
-
-/**
- * Plovoucí bílá pilulka nad obsahem. Hlavička je fixní, takže první sekce
- * každé stránky si nechává nahoře místo (pt-28 a víc).
- */
-export function Header() {
-  return (
-    <header className="fixed inset-x-0 top-0 z-30 px-3 pt-3 sm:px-5">
-      <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full bg-paper py-2 pr-2 pl-3 shadow-[0_6px_24px_rgb(20_20_20/0.10)] sm:pl-4">
-        <Link href="/" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="" width={44} height={44} priority className="size-10 sm:size-11" />
-          <span className="font-display text-lg font-extrabold tracking-tight sm:text-xl">Jaro TopInstal</span>
-        </Link>
-        <nav aria-label="Hlavní" className="hidden items-center gap-1 font-medium lg:flex">
-          {navigace.map((n) => (
-            <NavLink key={n.href} href={n.href}>
-              {n.label}
-            </NavLink>
-          ))}
-        </nav>
-        <a
-          href={firma.telHref}
-          className="hidden rounded-full bg-red px-5 py-2.5 font-display font-bold whitespace-nowrap text-white hover:bg-red-dark active:translate-y-px lg:block"
-        >
-          {firma.tel}
-        </a>
-        <MobilMenu />
-      </div>
-    </header>
-  );
-}
+export { Header } from "./NavLink";
 
 export function KontaktPas({
   nadpis = "Popište, co potřebujete, a domluvíme termín",

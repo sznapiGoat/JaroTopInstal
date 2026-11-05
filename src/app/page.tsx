@@ -183,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden">
+      <section data-header="svetla" className="relative isolate overflow-hidden">
         <Image
           src={fotky.podlahovkaPokoj.src}
           alt={fotky.podlahovkaPokoj.alt}

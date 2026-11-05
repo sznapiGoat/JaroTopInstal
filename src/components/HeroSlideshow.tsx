@@ -96,6 +96,8 @@ export function HeroSlideshow({ slides }: { slides: Slide[] }) {
             </div>
           );
         })}
+        {/* Ztmavení shora pod průhlednou hlavičkou */}
+        <div className="absolute inset-x-0 top-0 z-[2] h-44 bg-gradient-to-b from-ink/60 to-transparent" />
         {/* Ztmavení pod textem: zespodu na mobilu, zleva na desktopu */}
         <div className="absolute inset-0 z-[2] bg-gradient-to-t from-ink/95 via-ink/70 to-ink/35 lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/60 lg:to-ink/5" />
       </div>

@@ -96,7 +96,7 @@ export default function Zakazky() {
           </p>
         }
       />
-      <nav aria-label="Skupiny zakázek" className="sticky top-[4.75rem] z-10 bg-paper/95 backdrop-blur-sm">
+      <nav aria-label="Skupiny zakázek" className="sticky top-[4.25rem] z-10 bg-paper/95 backdrop-blur-sm">
         <ul className="no-scrollbar mx-auto flex max-w-6xl gap-2 overflow-x-auto px-5 py-3 sm:px-8">
           {skupiny.map((s) => (
             <li key={s.id} className="shrink-0">

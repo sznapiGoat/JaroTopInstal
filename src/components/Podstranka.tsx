@@ -39,6 +39,7 @@ export function HlavickaStranky({
           style={{ objectPosition: focus, transformOrigin: focus }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/70 to-ink/40 lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/60 lg:to-ink/10" />
+        <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-ink/60 to-transparent" />
       </div>
       <div className="mx-auto flex min-h-[min(72svh,660px)] max-w-6xl flex-col px-5 pt-28 pb-14 sm:px-8 md:pb-20">
         <Drobecky kroky={[drobek]} svetle />
